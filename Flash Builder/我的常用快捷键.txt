@@ -1,0 +1,120 @@
+"新建"菜单      Alt+Shift+N
+
+上一个编辑位置  Ctrl+Q
+
+上一个词        Ctrl+左箭头
+
+上滚行          Ctrl+向上箭头
+
+下一个编辑器    Ctrl+F6
+
+下一个视图      Ctrl+F7
+
+保存            Ctrl+S
+
+复制            Ctrl+C
+
+粘贴            Ctrl+V
+
+全选            Ctrl+A
+
+关闭            Ctrl+W
+
+内容辅助        Alt+/
+
+切换块注释      Ctrl+Shift+C
+
+切换注释        Ctrl+/
+
+删除上一个词语  Ctrl+Backspace
+
+删除下一个词语  Ctrl+Delete
+
+删除至行末      Ctrl+Shift+Delete
+
+删除行          Ctrl+D
+
+前移历史记录    Alt+右箭头
+
+后退历史记录    Alt+左箭头
+
+在层次结构中打开类型  Ctrl+Shift+H
+
+在当前行下面插入行  Shift+Enter
+
+将活动视图或编辑器最大化  Ctrl+M
+
+将行上移        Alt+向上箭头
+
+将行下移        Alt+向下箭头
+
+属性            Alt+Enter
+
+快速修正        Ctrl+1
+
+快速切换编辑器  Ctrl+E
+
+快速大纲        Ctrl+O
+
+快速访问        Ctrl+3
+
+打开"搜索"对话框  Ctrl+H
+
+打开声明        F3 == Ctrl+单击
+
+打开调用层次结构  Ctrl+Alt+H
+
+打开资源        Ctrl+Shift+R
+
+撤销            Ctrl+Z
+
+文字补全        Ctrl+Alt+/
+
+文本开头        Ctrl+home
+
+文本末尾        Ctrl+end
+
+显示位置        Alt+Shift+W
+
+显示工具提示描述  F2
+
+打开帮助文档    Shift+F2
+
+显示键辅助      Ctrl+Shift+L
+
+行首            Home
+
+行末            End
+
+选择当前至行首  Shift+Home
+
+选择当前至行末  Shift+End
+
+更改为大写      Ctrl+Shift+X
+
+更改为小写      Ctrl+Shift+Y
+
+更正缩进        Ctrl+i
+
+查找并替换      Ctrl+F
+
+添加其他注释    Ctrl+Shift+D
+
+调试            F11
+
+运行            Ctrl+F11
+
+转至行          Ctrl+L
+
+选择上一个词语  Ctrl+Shift+左箭头
+
+选择下一个词语  Ctrl+Shift+右箭头
+
+重做            Ctrl+Y
+
+重命名          Ctrl+Alt+R
+
+重复行          Ctrl+Alt+向上箭头
+
+
+

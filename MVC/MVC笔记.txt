@@ -1,0 +1,2 @@
+MVC(model(模型) + view(视图) + controller(控制器))
+三层架构(表现层 + 业务层 + 数据访问)

@@ -1,0 +1,12 @@
+https://m.jb51.net/article/17079.htm
+//as3 PureMVC使用例子
+
+http://www.111com.net/flash_a/As3/48979.htm
+//flash as3中MVC使用说明详解
+
+https://blog.csdn.net/changlinzi/article/details/4160139
+//as3 MVC例子1
+
+
+https://blog.51cto.com/neveras/255181
+//as3 MVC例子2

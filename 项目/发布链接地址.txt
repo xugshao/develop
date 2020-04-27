@@ -1,0 +1,1 @@
+http://127.0.0.1/ba/zk.html?ip=192.168.100.6&port=8310&account=xgs&gpu=true&guest=fasle&sid=100001&fcm=true&debug=true&cplat=17

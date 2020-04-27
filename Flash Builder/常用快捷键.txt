@@ -1,0 +1,47 @@
+Flex常用快捷键
+
+Ctrl-F11: 执行
+
+F11: debug模式运行
+
+Ctrl-Alt-Down: 重复目前所在编辑列
+
+Alt-Up: 移动本列，或选择列往上移动
+
+Alt-Down: 移动本列，或选择列下往移动
+
+Ctrl-Click: 移至定义区（F3 ）
+
+Ctrl-D: 删除本列
+
+Alt-/: 文字自动完成
+
+Ctrl-Up: 捲轴向上
+
+Ctrl-Down: 捲轴向下
+
+F3          显示当前选中标签的类定义
+
+F5          单步跳入(调试)
+
+F6          单步跳过(调试)
+
+F8          继续(调试)
+
+CTRL+0       在代码视窗显示大纲
+
+CTRL+SHIFT+C  加注释
+
+Ctrl+Shift+T：打开Class搜索框
+
+Ctrl+Shift+R：打开资源搜索框
+
+Ctrl+M：最大化/恢复当前编辑框
+
+Ctrl+Shift+O：组织导入
+
+Ctrl+/：行注释
+
+Ctrl+F: 当前文档查找并替换
+
+Ctrl+Shift+F:在文件中查找

@@ -1,0 +1,6 @@
+ba项目：
+client ssh://git@192.168.100.9:59878/ba/client.git
+res ssh://git@192.168.100.9:59878/ba/resource.git
+tools ssh://git@192.168.100.9:59878/ba/tools.git
+文档 svn://192.168.100.9/ba_doc
+美术 svn://192.168.100.9/ba_art
