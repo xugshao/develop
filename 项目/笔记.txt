@@ -1,0 +1,85 @@
+view >> controller >> model >> view
+
+XiuLingView.as面板调用相关
+1-定义<type>
+UINameManager.as >> XIU_LING //static
+
+2-资源路径列表
+ResourceName.as >> XIU_LING //static ="assets/ui/xiuLing.swf"
+
+3-注册
+UIManager.as >> regitterData(nuName名字，popPanel面板，res资源路径列表，title标题，wid界面宽度，hei界面高度，style样式编号（0：无背景，1背景样式1（默认），2：背景样式2，3背景样式3），closeDispose关闭界面执行销毁（默认false），dragAble是否可拖拽（默认true），layerType（1：popLayer层，2：popLayer2层，3：tipsLayer层），isFollowStageResize是否跟随舞台大小变化而变化（默认false）)
+例如：registerData（UINameManager.XIU_LING,XiuLingView,[ResourceName.XIU_LING],"xiu_ling",950,597,1,true);
+
+/**
+* @param uiName        UI名字
+* @param popPanel      面板
+* @param res           资源路径列表
+* @param title      标题
+* @param wid         界面宽度
+* @param hei        界面高度
+* @param style         样式编号(0:无背景, 1:背景样式1(默认),2:背景样式2,3:背景样式3)
+* @param closeDispose  关闭界面执行销毁
+* @param dragAble      是否可拖拽
+* @param layerType  1:popLayer层  2:popLayer2层 3 tipsLayer层
+* @param isFollowStageResize  是否跟随舞台大小变化而变化
+*/
+public function registerData(uiName:int, popPanel:Class, res:Array = null, title:String = "", wid:uint = 300, hei:uint = 400, style:uint = 1, closeDispose:Boolean = false, dragAble:Boolean = true, layerType:uint = 1, isFollowStageResize:Boolean = false):void
+{
+	if(Debug.IS_DEBUG)
+	{
+		if(uiName%100 != 0 || gPanelClassDic[uiName])
+		{
+			throw new Error("注册的面板ID错误或重复:"+uiName);
+		}
+	}
+			
+	if(Debug.IS_DEBUG == true)
+		closeDispose = PopPanelManager.ALL_DISPOSE_TEST || closeDispose;
+			
+		gPanelClassDic[uiName] = popPanel;
+		gPanelDataDic[uiName] = {uiName: uiName, popPanel: popPanel, res: res, style: style
+			, title: title, wid: wid, hei: hei, closeDispose: closeDispose
+			, dragAble: dragAble, layerType: layerType, isFollowStageResize:isFollowStageResize
+		};
+}
+
+调用响应事件
+
+1-定义<type>组
+MainMenuView.as >> gDownBtnTypes  // = [..,UINameManager.XIU_LING,..]
+
+2-定义UI资源
+mainMenu.fla >> mainMenu.DownBtn_<type>
+mainMenu.fla >> mainMenu.DownBtnLabel_<type>
+
+3-创建响应按钮 >> 响应方法 >> 点击操作执行方法
+
+MainMenuBtn.as >> onClick() >> OpenView.open(<type>)
+
+
+打开界面类
+OpenView.as >> open()
+例如：OpenView.open(<type>)
+/**
+* 打开界面
+* @param uiName     ui名称   (UINameManager处定义)
+* @param openType   打开类型        1:当前界面是关闭状态则打开，反之则关闭,2:强制打开,3:强制关闭
+* @param openData   打开界面时附带的数据
+*/
+public static function open(uiName:int, openType:uint = 1, openData:Object = null):void
+{
+	if(openType != FORCLOSE && canOpen(uiName) == false) 
+		return;
+			
+	PopPanelManager.getInstance().openPop(uiName, openType, openData);
+}
+
+语言添加
+language.json >> menu_+<type> //menu_46100
+
+
+
+
+
+

@@ -38,8 +38,6 @@
 
 后退历史记录    Alt+左箭头
 
-在层次结构中打开类型  Ctrl+Shift+H
-
 在当前行下面插入行  Shift+Enter
 
 将活动视图或编辑器最大化  Ctrl+M

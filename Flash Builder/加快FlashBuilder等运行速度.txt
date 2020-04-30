@@ -1,0 +1,43 @@
+Flash Build 4编译慢、报java heap space 堆空间异常错误的解决方法：
+
+
+
+
+1、在安装路径下找到FlexBuilder.ini文件，进行编辑，加入如下参数
+
+
+-vmargs
+
+-Xms128m
+
+-Xmx512m #可以设置得更高一些
+
+-XX:MaxPermSize=256m
+
+-XX:PermSize=64m #不要设置太高，否则会更加慢
+
+-Djava.net.preferIPv4Stack=true
+
+
+
+
+以上几条经验可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。
+
+
+
+
+
+2、由于Flex Builder compiler shell有memory leak的问题， 而SDK默认的的 JVM heap size 只有312M，当compile比较大的project容易不够，所以只要修改SDK的JVM参数就可以。
+
+
+编辑 {Flex SDK}安装路径/bin/jvm.config 文件如下。
+
+
+java.args=-Xmx512m -Dsun.io.useCanonCaches=false
+
+
+如果还是有Error，可以增加到1024或者更多,由于我是8G内容所以暂时设置了2000.
+
+
+
+注：我的flex4安装路径中的sdk位置：D:\Adobe\Adobe Flash Builder 4\sdks\4.0.0\bin\jvm.config在这里调整即可！
