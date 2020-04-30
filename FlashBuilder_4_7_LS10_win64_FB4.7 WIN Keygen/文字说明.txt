@@ -1,0 +1,40 @@
+1. 拔掉网线断掉网络（非常重要的一步），清理你的HOST文件(C:\WINDOWS\system32\drivers\etc)，确保没有诸如： 
+127.0.0.1 lmlicenses.wip4.adobe.com 
+127.0.0.1 lm.licenses.adobe.com 
+
+2. 打开注册机“xf-mccs6.exe”，点击“generate” 生成序列号；
+3. 将生成的序列号前4位替换为：1424 
+1325-1627-6964-9232-5771-4755
+1424-1627-6964-9232-5771-4755
+
+4、这时，下载解压本站提供的flash builder 4.7软件；
+
+5、解压成功后，请不要关掉注册机进行软件安装；
+
+
+6、当出现“请连接于是internet，然后重试”时，请点击“稍后链接”；
+
+7、然后依提示点击“安装”即可；
+8、软件正在安装中，请稍后；
+
+9、成功安装后，打开桌面上生成的flash builder 4.7程序；
+10、出现“请连接到internet以验证序列号”时，选择“连接internet时是否出现问题”；
+
+11、再选择“脱机激活”；
+
+12、选择“生成请求代码”
+
+13、复制请求代码到注册的requests框中，点击“generate”生成“activation”；
+14、请求代码【Doqj e2pB OC9s xjWu mU3H EQNQ 0u6x Qmdg oSwD S9vM cxc=】
+
+15、得到响应代码【sz73 DiHS XVMj zA/S pQA+ f5GD lgb6 B0Yv 0Yic gIRK 9GE=】
+
+16、成功激活后，打开软件，点击帮助菜单--flash builder产品注册，你会发现软件试用期为32767天，事实上已经将flash builder 4.7成功破解。
+
+17、为了防止日后我们在使用的时候，adobe flash builder 4.7自动联网验证，导致激活失效，还是要把下面这几行东西加到Host表中。
+127.0.0.1   activate.adobe.com
+127.0.0.1   practivate.adobe.com
+127.0.0.1   lmlicenses.wip4.adobe.com
+127.0.0.1   lm.licenses.adobe.com
+
+18、大功告成，现在软件可能无限制免费使用。

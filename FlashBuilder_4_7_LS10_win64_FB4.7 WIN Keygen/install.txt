@@ -1,0 +1,112 @@
+windows Install Instructions: (Read carefully!)
+
+1. Disable your Network card or pull the network cable.
+And make sure you dont have any of these entries in your hosts file:
+   127.0.0.1 lmlicenses.wip4.adobe.com
+   127.0.0.1 lm.licenses.adobe.com
+   Lets start clean :)
+
+
+2. make serial with xf keygen
+
+
+3. replace first 4 digits of serial generated with 1424
+4. Install Adobe flash builder 4.7 with the serial ( do not close the keygen!).
+   When the error "Please connect to the internet and retry" shows click connect later.
+
+5. Launch Adobe flash builder 4.7
+
+6. Confirm you have "connection problem" and you want it to
+   activate offline.
+
+
+7. A request code will be generated. Use it with the serial you used to install adobe 
+   to generate your activation code.
+
+8. Validate it of course :).
+
+9. When installation is finished 
+   run  disable_activation.cmd (double click on it) 
+   (in Vista or Win7, run it as admin if you have uac enabled)
+
+   
+Or do it manually: 
+   
+Add the text below to the bottom of your hosts file. (The host file is located C:\windows\system32\drivers\etc\hosts)
+
+# Adobe Blocker
+
+127.0.0.1 lmlicenses.wip4.adobe.com
+
+127.0.0.1 lm.licenses.adobe.com
+
+
+Note: If you encounter any issues with installation/crack, please
+uninstall and delete those folders and retry:
+
+C:\Program Files (x86)\Common Files\Adobe\SLCache
+
+C:\ProgramData\Adobe\SLStore
+
+
+If you re-install or want to install another application
+Before entering your serial
+Make sure your host file is clean and your internet is blocked a way or another, start at Step 1
+
+
+
+
+窗户安装说明：(仔细阅读！ )
+
+ 1. 禁用您的网卡或拉网线。
+ 确保您的主机文件中没有这些条目：
+ 127.0.0.1lmlicenses.wip4.adobe.com
+ 127.0.0.1lm.licenses.adobe.com
+   让我们开始清理吧
+
+
+ 2.用XFkeygen制作串行
+
+
+ 3.用1424代替前4位串行生成
+ 4. 安装Adobe闪存构建器4.7与串行(不要关闭keygen！ )。
+   当错误“请连接到互联网并重试”显示后单击“连接”。
+
+ 5. 启动Adobe闪存生成器4.7
+
+ 6. 确认您有“连接问题”，并希望它
+ 离线激活。
+
+
+ 7. 将生成请求代码。 在安装adobe时使用它
+ 生成激活代码。
+
+ 8. 当然验证它：)。
+
+ 9. 当安装完成.
+ 运行disable_activation.cmd（双击它）
+ (在Vista或Win7中，如果已启用UAC，则以管理员身份运行它)
+
+   
+ 或者手动操作：.
+   
+ 将下面的文本添加到主机文件的底部。 (主机文件位于C：\windows\system32\drivers\etc\hosts)
+
+ #Adobe Blocker
+
+ 127.0.0.1lmlicenses.wip4.adobe.com
+
+ 127.0.0.1lm.licenses.adobe.com
+
+
+ 注意：如果您遇到任何安装/裂纹问题，请
+ 卸载和删除这些文件夹并重试：
+
+ C：\Program Files(X86)\Common Files\Adobe\SLCache
+
+ C：\ProgramData\Adobe\SL Store
+
+
+ 如果您重新安装或希望安装另一个应用程序
+ 在进入你的系列赛之前
+ 确保您的主机文件是干净的，并且您的互联网以某种方式被阻塞，从第一步开始
