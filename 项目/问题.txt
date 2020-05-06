@@ -1,0 +1,6 @@
+1、什么类型的面板（/什么时候）要加入这个列表
+addDisposeItem添加到待销毁列表 
+
+gNoDisposeArr添加到不销毁列表
+
+

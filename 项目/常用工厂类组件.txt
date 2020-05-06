@@ -1,0 +1,23 @@
+图片按钮：
+var _btn:CyBitmapButton = ComponentUtil.cyBitmapButton("view.skin.BitmapButton_Page_down",35,40);
+
+九宫格切图可拉伸背景：
+var _bg:DisplayObject = ComponentUtil.createBg("common.Bg_1",950-14,597-54,0,0);
+
+图标：
+var gShow:CyImage = ComponentUtil.cyImage(304,320,"",0,0,CyImage.MIDDLE,CyImage.BOTTOM);
+
+text显示文本：
+var gStep:CyTextField = ComponentUtil.cyTextField("",-2,65,gBtn.width,22,ColorUtil.TEXT_GREEN);
+
+font文本：
+gStep.htmlText = HtmlUtil.font(getLang(31,LanguageUtil.XIULING),ColorUtil.TEXT_WHITE);
+
+输入文本框 ：
+var gSetInput:CyInputTextField = ComponentUtil.cyInputTextField("",154,18,164,24);
+
+txt文本按钮:
+var gSetBtn:CyTextButton = ComponentUtil.cyTextButton(2,BagManager.lan(8),0,255,73,28);
+
+屏幕中间滚动提示:
+Message.show("屏幕中间滚动提示")
