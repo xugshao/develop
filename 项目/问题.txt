@@ -4,3 +4,9 @@ addDisposeItem添加到待销毁列表
 gNoDisposeArr添加到不销毁列表
 
 
+2、UIManager.as >>
+registerData() >>
+title 标题
+layerType 1:popLayer层  2:popLayer2层 3 tipsLayer层
+
+3、LanguageUtil.BACK_ACT_BA

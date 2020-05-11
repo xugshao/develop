@@ -1,0 +1,23 @@
+配置
+F: >> ba >> doc >> data >> wanted_boss_data.xml
+F: >> ba >> tools >> convert >> tpl >> wanted_boss_data.clitpl.php
+
+
+协议
+F: >> ba >> tools >> protocol >> proto >> 段
+
+
+需求
+F: >> ba >> doc >> 策划文档 >>
+
+
+美术资源
+E: >> project >> ba >> art >>
+
+
+文档自动生成命令
+sh ctl.sh proto 186
+sh ctl.sh convert language
+sh ctl.sh convert task_data
+
+

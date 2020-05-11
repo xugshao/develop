@@ -4,3 +4,16 @@ res ssh://git@192.168.100.9:59878/ba/resource.git
 tools ssh://git@192.168.100.9:59878/ba/tools.git
 文档 svn://192.168.100.9/ba_doc
 美术 svn://192.168.100.9/ba_art
+
+svn账户：xuguangshao密码：xuguangshao0507
+
+
+接口文档自动生成命令
+sh ctl.sh proto 159
+sh ctl.sh convert language
+sh ctl.sh convert task_data
+
+
+设置简化路径
+ln -s f:/ba ba
+

@@ -1,18 +1,10 @@
-view >> controller >> model >> view
+MVC >> view >> controller >> model >> view
 
-XiuLingView.asÃæ°åµ÷ÓÃÏà¹Ø
-1-¶¨Òå<type>
-UINameManager.as >> XIU_LING //static
 
-2-×ÊÔ´Â·¾¶ÁĞ±í
-ResourceName.as >> XIU_LING //static ="assets/ui/xiuLing.swf"
 
-3-×¢²á
-UIManager.as >> regitterData(nuNameÃû×Ö£¬popPanelÃæ°å£¬res×ÊÔ´Â·¾¶ÁĞ±í£¬title±êÌâ£¬wid½çÃæ¿í¶È£¬hei½çÃæ¸ß¶È£¬styleÑùÊ½±àºÅ£¨0£ºÎŞ±³¾°£¬1±³¾°ÑùÊ½1£¨Ä¬ÈÏ£©£¬2£º±³¾°ÑùÊ½2£¬3±³¾°ÑùÊ½3£©£¬closeDispose¹Ø±Õ½çÃæÖ´ĞĞÏú»Ù£¨Ä¬ÈÏfalse£©£¬dragAbleÊÇ·ñ¿ÉÍÏ×§£¨Ä¬ÈÏtrue£©£¬layerType£¨1£ºpopLayer²ã£¬2£ºpopLayer2²ã£¬3£ºtipsLayer²ã£©£¬isFollowStageResizeÊÇ·ñ¸úËæÎèÌ¨´óĞ¡±ä»¯¶ø±ä»¯£¨Ä¬ÈÏfalse£©)
-ÀıÈç£ºregisterData£¨UINameManager.XIU_LING,XiuLingView,[ResourceName.XIU_LING],"xiu_ling",950,597,1,true);
-
+1¡¢×¢²áµ¯³öÃæ°å UIManager.as >> registerPanelClass() >> registerData()
 /**
-* @param uiName        UIÃû×Ö
+* @param uiName        UIÃû×Ö   
 * @param popPanel      Ãæ°å
 * @param res           ×ÊÔ´Â·¾¶ÁĞ±í
 * @param title      ±êÌâ
@@ -25,27 +17,29 @@ UIManager.as >> regitterData(nuNameÃû×Ö£¬popPanelÃæ°å£¬res×ÊÔ´Â·¾¶ÁĞ±í£¬title±êÌ
 * @param isFollowStageResize  ÊÇ·ñ¸úËæÎèÌ¨´óĞ¡±ä»¯¶ø±ä»¯
 */
 public function registerData(uiName:int, popPanel:Class, res:Array = null, title:String = "", wid:uint = 300, hei:uint = 400, style:uint = 1, closeDispose:Boolean = false, dragAble:Boolean = true, layerType:uint = 1, isFollowStageResize:Boolean = false):void
-{
-	if(Debug.IS_DEBUG)
-	{
-		if(uiName%100 != 0 || gPanelClassDic[uiName])
-		{
-			throw new Error("×¢²áµÄÃæ°åID´íÎó»òÖØ¸´:"+uiName);
-		}
-	}
-			
-	if(Debug.IS_DEBUG == true)
-		closeDispose = PopPanelManager.ALL_DISPOSE_TEST || closeDispose;
-			
-		gPanelClassDic[uiName] = popPanel;
-		gPanelDataDic[uiName] = {uiName: uiName, popPanel: popPanel, res: res, style: style
-			, title: title, wid: wid, hei: hei, closeDispose: closeDispose
-			, dragAble: dragAble, layerType: layerType, isFollowStageResize:isFollowStageResize
-		};
-}
+ÀıÈç£ºregisterData£¨UINameManager.XIU_LING,XiuLingView,[ResourceName.XIU_LING],"xiu_ling",950,597,1,true);
+
+2-¶¨Òå uiÃû³Æ <type>
+UINameManager.as >> UINameManager.XIU_LING  //Èç46100
+
+3-¶¨Òå ×ÊÔ´Â·¾¶ÁĞ±í <res>
+ResourceName.as >> ResourceName.XIU_LING //Èç"assets/ui/xiuLing.swf"
+
+¶ÔÓ¦UI×ÊÔ´Â·¾¶¼°asÁ´½ÓÃüÁî¹æÔò
+"ba\resources\ui\xiuLing.swf"
+"ba\resources\assets_src\ui\xiuLing.fla"
+asÁ´½ÓÃüÁî£º<file>.<ÀàĞÍÃû>,Èç£ºxiuLing.btn_1
+
+
+
+
+
+
+
+
+
 
 µ÷ÓÃÏìÓ¦ÊÂ¼ş
-
 1-¶¨Òå<type>×é
 MainMenuView.as >> gDownBtnTypes  // = [..,UINameManager.XIU_LING,..]
 

@@ -1,0 +1,2 @@
+1、as3 flex 中经常用的一些htmlText属性
+https://blog.csdn.net/tanjinjun2011/article/details/8875837
