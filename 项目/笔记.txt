@@ -31,10 +31,8 @@ ResourceName.as >> ResourceName.XIU_LING //如"assets/ui/xiuLing.swf"
 as链接命令：<file>.<类型名>,如：xiuLing.btn_1
 
 
-
-
-
-
+测试入口
+ConsolerController.as >> onInput() >> OpenView.open(UINameManager.XUAN_SHANG_BOSS_ROLL);
 
 
 
