@@ -5,3 +5,7 @@ https://blog.csdn.net/weixin_44950987/article/details/102619708?depth_1-utm_sour
 https://www.bootcss.com/p/git-guide/?tdsourcetag=s_pctim_aiomsg
 //简化版说明
 
+
+https://www.cnblogs.com/king-le0/p/10097583.html
+//Git强制覆盖master分支
+

@@ -1,0 +1,132 @@
+对于初学编程的新手来说很容易忽视的三个问题：命名、注释、格式。我给如下建议：
+
+一、命名：从包、类、函数、变量、常量等命名应该制定一些规则，目的让代码内容可读性增强，还可以避免一些重名的情况；（所有命名尽量描述完成意义，不要仅为了减少命名长度而影响可读性）
+1、包名，用小写字母开头；（通常一个单词即可，多单词可用驼峰式）
+  package game.battle.monster{}
+2、类名，用大写字母开头，驼峰式命名；（这样看到首字母是大写就知道是类名了）
+  class MonsterBase; class Monster;
+3、函数，用小写字母开头，驼峰式命名；
+  function autoFire();  
+  1）回调函数，使用 Handle 做为后缀；
+     function deadHandle();
+  2）事件函数，使用 on 做为前缀；
+     function onClick();    
+4、临时变量名和公有成员变量，用小写字母开头，驼峰式命名；
+  var roleSpeed:int;
+  var roleBagSize:int;
+  public value;
+  public function get roleLife():int{ return 100;}
+5、在private或protected的属性定义时加上m前缀（区分一下，表示内部成员变量）
+  private var mRoleSpeed:int;
+  protected var mRoleLife:int;
+6、常量，全大写字母，使用 _ 分隔多个单词；
+  const MONSTER_TYPE:int = 1;
+
+二、注释：声明定义一定要有注释，主要逻辑和算法一定要有注释，注释要写详细（可用ASDoc生成代码帮助文档）
+1、类注释，建议修改类模板，自动新建类时创建好注释格式；（首选项-Flash Builder-文件模板）
+${package_declaration}
+{
+${import_declaration}
+/**
+  * 类名
+  * @author 夜影（QQ2823857417）  
+  */
+${class_declaration}
+{
+ // 属性 ======================================================
+ // 初始化 ====================================================
+ ${class_body}
+ // 接口 ======================================================
+ // 内部函数 ==================================================
+ // 事件 ======================================================
+}
+}
+2、函数注释，要写清楚函数用途、返回值、参数作用；（如果是回调函数参数，请将回调函数的参数也写清楚）
+ /**
+  * 设置点击后处理回调函数
+  * @param type 处理类型
+  * @param fn 回调函数(是否打开:Boolean)
+  */  
+ public function setClickHandler(type:String, fn:Function):void
+ {
+ }
+3、成员属性注释，用块注释不要用行注释；
+ /**
+  * 角色移动的速度
+  */  
+  private var mRoleSpeed:int;
+4、 逻辑注释 ，使用行注释，放在代码上方；（最好在//后加一个空格，更好识别文字内容）
+ // 循环100次
+ for(var i:int=0; i<100; i++);
+
+三、格式：影响可读性最大的是格式；（在编码过程中最难找到的BUG不是逻辑性的，是两个长得差不多的变量名写错了）
+1、大括号，让两个括号都单独在一行，这样比较容易在多层括号里观察哪些是成对的；
+    if( true )
+    {
+        if( true )
+        {
+            ...
+        }
+    }
+2、空格：通常用空格分离多表达式，只是为了看得更清楚；
+    var a:int = 3;
+    if( a>b && b<c || c==d ) ;
+    for(var i:int=0; i<100; i++);
+
+
+--------------------------
+
+所有的程序语言中都有一些事先定义好的，有特别意义的标识符，叫做关键字。
+
+程序编程时要注意不能使用和关键字同名的命名。（在FB编辑器中输入关键字就会改变颜色和变粗，而且会有错误提示，所以新手不用担心记不住这么多单词，做了解即可）
+
+定义型关键字:
+var          定义一个变量。
+const        定义一个常量。
+get          定义一个只读属性的方法。
+set          定义一个可写属性的方法。
+package      指定包路径。
+class        定义一个类。
+extends      指定继承的类。
+interface    定义接口。
+implements   指定实现一个或多个接口。
+function     定义函数。
+... (rest)   定义函数将接受任意多个以逗号分隔的参数。
+namespace    允许您控制定义的可见性。
+
+
+语句型关键字:
+if else      条件语句。
+for          计数循环语句。
+for in       遍历键循环语句。
+for each in  遍历值循环语句。
+while        条件循环语句。
+do while     先执行一次的条件循环语句。
+continue     跳到下一次循环过程。
+switch       选择执行语句。
+case         switch 语句的选择项。
+default      定义 switch 语句的默认选择项。
+break              跳出语句，跳出语句体外（大括号外）。
+(label):     可从 break 或 continue 引用的标识符跳转到当前标记。
+return       返回函数调用。
+super        调用父类对象的引用。
+throw        抛出错误。
+try catch finally 异常处理。
+with         建立要用于执行一条或多条语句的默认对象。
+
+
+属性型关键字:
+dynamic      指定动态类，实例可具有在运行时添加属性或方法。
+final        指定不能覆盖方法或者不能扩展类。
+internal     指定类、变量、常量或函数可用于同一包中的任何调用者。
+override     指定用一种方法替换继承的方法。
+private      指定变量、常量、方法或命名空间仅可供定义它的类使用。
+protected    指定变量、常量、方法或命名空间只可用于定义它的类及该类的任何子类。
+public       指定类、变量、常量或方法可用于任何调用者。
+static       指定变量、常量或方法属于类，而不属于类的实例。
+
+
+保留关键字: AS3语言保留供将来使用的关键字，在代码中也应该避免使用到这些；
+abstract, boolean, byte, cast, char, debugger, double, enum, export,
+float, goto, intrinsic, long, prototype, short, synchronized, throws,
+to, transient, type, virtual, volatile

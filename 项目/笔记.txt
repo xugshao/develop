@@ -37,6 +37,8 @@ ConsolerController.as >> onInput() >> OpenView.open(UINameManager.XUAN_SHANG_BOS
 
 
 
+
+
 调用响应事件
 1-定义<type>组
 MainMenuView.as >> gDownBtnTypes  // = [..,UINameManager.XIU_LING,..]
@@ -71,7 +73,144 @@ public static function open(uiName:int, openType:uint = 1, openData:Object = nul
 language.json >> menu_+<type> //menu_46100
 
 
+回调函数与事件函数的比例解说：
+回调知函数就像你跟别人说 你帮我做什么事 完成后 打 138xxxxx 这个电话给我
+电话 这个就是你的回调函数，通用表现就是
+as2.0里面的 XML加载 或 MovieClipLoader 加载器之类的 onLoader onLoadInit之类的 加载 或加载完成 加载失败等回调处理函数 因为加载过程是异步执行的
+一般回调函数定义了 函数的传入参数格式
+而自定义事件则是比回调函数更灵活的一样东西，它更像一个主持人和答题者的关系
+主持人说，现在是抢答道题环节，当我说完题目后，大家可以按抢答键抢答
+这时候关注这个事件内的人 会注册关注，而无关的人 则可以不用理会
+答题者全神贯注注容意主持人（事件派发者），一旦读完题目（派发事件），就会作相应的处理
+事件的参数可以通过事件对象本身携带 （事件派发者 打包一个事件对象 里面携带有事件的类型 及相应的自定义携带数据） 事件接收者 收到 事件 发生时，可以去查看 事件对象 ，获取里面携带的数据，比起回调函数通过形参的方式传值，事件更深一步加强了稳定性（通过事件类对象携带）
 
+例1：当你想通过一个类来加载XML或者图片等，想让他返回一个XML或者Bitmap，你不能在类的构造函数直接return，因为他可能return的时候还没有load完，往往会返回一个空的，这时候你就可以尝试使用回调函数了，或者使用DispatchEvent，如果是一个小程序的话不妨试下回调函数，简单实用。
 
+	public class LoadXML
+			{
+				   private var fBack:Function;
+					public function LoadXML(url:String, fBackIn:Function)
+					{
+							fBack = fBackIn;
+							var xmlLoader:URLLoader = new URLLoader();
+							xmlLoader.load(new URLRequest(url));
+							xmlLoader.addEventListener(Event.COMPLETE, loadComplete);
+					}
+					private function loadComplete(e:Event):void
+					{
+							trace("XML loaded OK");
+							var xmlData:XML = new XML(e.target.data);
+						   fBack(xmlData);
+					}
+			}
 
+	主函数里这样写就可以了，就会返回一个XML
+
+	var loadXML:LoadXML = new LoadXML("assets/MapData.xml", floading);
+	private function floading(xml:XML):void
+					{
+							xmlData = xml;
+					}
+
+例2：				
+CallBackTest是回调的测试类：
+
+	 1 package
+	 2 {
+	 3     import flash.display.Sprite;
+	 4     
+	 5     public class CallBackTest extends Sprite
+	 6     {
+	 7         private var demo:DemoClass = new DemoClass(); 
+	 8         public function CallBackTest()
+	 9         {
+	10             demo.setData(result, " num = ", 1); 
+	11         }      
+	12         
+	13         public function  result(...arg):void {
+	14             trace("我就是回调函数！" + arg[0] + arg[1] + arg[2]) ;
+	15         }
+	16     }
+	17 }
+	 
+	DemoClass是包含回调函数的类，例子很简单不用多解释了。
+
+	 1 package
+	 2 {
+	 3     public class DemoClass
+	 4     {
+	 5         
+	 6         public function DemoClass(){
+	 7             
+	 8         }
+	 9             
+	10         public function setData(onFun:Function, ...args):void {
+	11             onFun(args, " trans new Data ", 2);
+	12         }
+	13         
+	14     }
+	15 }
+
+	输出结果是
+
+	我就是回调函数！ num = ,1 trans new Data 2				
+
+	
+as3 递归 遍历文件夹
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+	??????? xmlns:s="library://ns.adobe.com/flex/spark"
+	??????? xmlns:mx="library://ns.adobe.com/flex/mx">
+	?
+	?<fx:Script>
+	??<![CDATA[
+	???
+	???private var FilrUrlArr:Array = new Array();
+	???
+	???protected function button1_clickHandler(event:MouseEvent):void
+	???{
+	????
+	????GetFiles("E:\\myWork");
+	????for each (var obj:Object in FilrUrlArr)
+	????{
+	?????trace(obj.toString());
+	????}
+	???
+	???}
+	???
+	???public function GetFiles(strPath:String):void
+	???{
+	????//获取指定路径下的所有文件名
+	????var directory:File = new File(strPath);
+	????var contents:Array = directory.getDirectoryListing();
+	????for (var i:uint = 0; i < contents.length; i++)
+	????{
+	?????trace(contents[i].name, contents[i].size);
+	?????var file:File = contents[i] as File;
+	?????
+	?????if(file.isDirectory){
+	??????
+	??????GetFiles(file.nativePath);
+	??????
+	?????}else{
+	??????
+	??????
+	??????FilrUrlArr.push(file.nativePath + "==" + file.extension);
+	??????
+	?????}
+	?????
+
+	????}
+	???}
+	???
+	???
+	??]]>
+	?</fx:Script>
+	?
+	?<fx:Declarations>
+	??<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	?</fx:Declarations>
+	?<s:Button x="44" y="104" label="按钮" click="button1_clickHandler(event)"/>
+	</s:WindowedApplication>
 

@@ -6,7 +6,30 @@ gNoDisposeArr添加到不销毁列表
 
 2、UIManager.as >>
 registerData() >>
-title 标题
-layerType 1:popLayer层  2:popLayer2层 3 tipsLayer层
+title 标题 用来做什么？
+layerType 1:popLayer层  2:popLayer2层 3 tipsLayer层，这些层有什么区别？
 
 3、LanguageUtil.BACK_ACT_BA
+
+4、ChargeDiscountView.as >>
+gBtn = ComponentUtil.cyBitmapButton("view.skin.BitmapButton_Act2",572,497);
+gBtn.setImgLabel("seract.getLabel2");
+这些资源命名规范？
+
+5、界面宣传语id是什么？
+
+6、Alert.show(_str,[Alert.OK_LABEL,Alert.CANCEL_LABEL],function(index:int):Boolean
+				{
+					if(index == 0)
+					{
+						ChargeManager.recharge();
+					}
+					return true;
+				});
+回调函数，index==0,这个值哪里来？
+
+7、AlertVo.fromObj({"checkBoxKey":"FreeBuyItem"}));
+
+
+				
+
