@@ -28,7 +28,11 @@ gBtn.setImgLabel("seract.getLabel2");
 				});
 回调函数，index==0,这个值哪里来？
 
-7、AlertVo.fromObj({"checkBoxKey":"FreeBuyItem"}));
+7、AlertVo.fromObj({"checkBoxKey":"FreeBuyItem"})); 这参数是填当前操作的面板类或者UIName?
+
+8、BackActController.getInstance().reqJoinCommon(gBackActVo.id,gBackActVo.ver,0); 购买请求专用？ 这里的参数，cusId子项是指什么？
+
+9、gVo = BackActManager.getInstance().getOpenActListByUiName(uiName)[0];
 
 
 				

@@ -70,3 +70,27 @@
 
 	它意思是说.切换到dev分支上,接着跟远程的origin地址上的dev分支关联起来
 	
+五、删除本地分支及远程分支
+
+	切换到master分支
+
+	git checkout master
+
+	查看已有的本地及远程分支
+
+	git branch -a
+
+	删除远程分支
+
+	git push origin --delete dev
+
+	删除后，再次查看分支情况
+
+	git branch -a
+
+	删除本地分支
+
+	git branch -D dev
+
+	远程分支和本地分支删除完毕
+	

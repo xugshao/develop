@@ -17,3 +17,8 @@ sh ctl.sh convert task_data
 设置简化路径
 ln -s f:/ba ba
 
+
+开发计划地址
+http://192.168.100.10:3000/projects/ba/issues
+xuguangshao
+123456789
